@@ -25,6 +25,10 @@
   <h2>Installation & Usage</h2>
   <p>No external dependencies required. Works on Windows, macOS, and Linux.</p>
 
+
+https://github.com/user-attachments/assets/d9b4f643-552a-4877-9c6f-d5a6a9ee67dc
+
+
   <h3>1. Prerequisites</h3>
   <p>Ensure you have Python 3 installed on your system.</p>
   <pre><code>python --version</code></pre>
