@@ -291,7 +291,7 @@ class Termagotchi:
             if self.state["stats"]["health"] <= 0:
                 self.die()
 
-            # Crypto Market Fluctuation
+            
             change = random.uniform(-0.1, 0.1) * hours
             self.state["market"]["btc_price"] *= (1 + change)
 
@@ -324,11 +324,11 @@ class Termagotchi:
         self.state["age"] += 0.01
         self.check_evolution()
         
-        # Crypto Drift
+        
         market_drift = random.uniform(-0.02, 0.02)
         self.state["market"]["btc_price"] *= (1 + market_drift)
         
-        # Stats Decay
+        
         trait = self.state["trait"]
         
         h_dec = 0.5 * (1.5 if trait == "glutton" else 1.0)
@@ -344,7 +344,7 @@ class Termagotchi:
             self.state["stats"]["energy"] = min(100, self.state["stats"]["energy"] + 2.0)
             self.state["stats"]["hunger"] = max(0, self.state["stats"]["hunger"] - 0.1)
 
-        # Health Logic
+        
         if self.state["stats"]["hunger"] < 10 or self.state["stats"]["hygiene"] < 10:
             self.state["stats"]["health"] -= 0.5
         
@@ -360,7 +360,7 @@ class Termagotchi:
         if self.state["stats"]["health"] <= 0:
             self.die()
 
-        # Random Poop
+
         if self.state["stats"]["hunger"] > 0 and not self.state["status"]["sleeping"]:
              if random.random() < 0.005:
                  self.state["status"]["poop_count"] += 1
@@ -434,15 +434,15 @@ class Game:
         Utils.clear()
         p = self.pet.state
         
-        # Weather & Time
+        
         hour = datetime.now().hour
         weather = "night" if hour < 6 or hour > 18 else "sunny"
         sky = Assets.ICONS[weather]
         
-        # Top Bar
+        
         print(f"{Colors.BG_BLUE}{Colors.WHITE}{Colors.BOLD} {p['name']} (Lv.{p['rpg']['lvl']}) {Colors.RESET} {Colors.BG_BLACK} {sky} {weather.upper()} {Colors.RESET} {Colors.BG_YELLOW}{Colors.BLACK} {Assets.ICONS['gold']} {p['wallet']['gold']} {Colors.RESET} {Colors.BG_MAGENTA}{Colors.WHITE} {Assets.ICONS['crypto']} {p['wallet']['crypto']:.4f} {Colors.RESET}")
         
-        # Sprite View
+        
         print(f"{Colors.CYAN}╔{'═'*58}╗{Colors.RESET}")
         
         sprite = Assets.SPRITES.get(p["stage"], Assets.SPRITES["egg"])
@@ -450,11 +450,11 @@ class Game:
         if p["status"]["sleeping"]: 
             sprite = ["      z z Z Z    ", "     ( - . - )   ", "      (_____)    "]
 
-        # Scene composition
+        
         scene_lines = []
         scene_lines.append("")
         
-        # Status Icons
+        
         status_line = ""
         if p["status"]["sick"]: status_line += f"{Colors.RED}[SICK]{Colors.RESET} "
         if p["status"]["sleeping"]: status_line += f"{Colors.BLUE}[SLEEP]{Colors.RESET} "
@@ -462,14 +462,14 @@ class Game:
         if p["stats"]["hygiene"] < 30: status_line += f"{Colors.GREEN}[STINKY]{Colors.RESET} "
         scene_lines.append(status_line.center(68))
 
-        # Sprite
+
         for line in sprite:
             color = Colors.GREEN
             if p["status"]["sick"]: color = Colors.RED
             if p["status"]["sleeping"]: color = Colors.BLUE
             scene_lines.append(f"{color}{line}{Colors.RESET}".center(68))
 
-        # Floor (Poop)
+        
         poops = f"{Assets.ICONS['poop']} " * p["status"]["poop_count"]
         scene_lines.append(f"{poops}".center(58))
         
@@ -478,12 +478,12 @@ class Game:
 
         print(f"{Colors.CYAN}╚{'═'*58}╝{Colors.RESET}")
 
-        # Vitals
+        
         print(f" {Colors.RED}{Assets.ICONS['health']} HP: {Utils.draw_bar(p['stats']['health'], p['stats']['max_health'], 10, Colors.RED)} {Colors.GREEN}{Assets.ICONS['hunger']} FD: {Utils.draw_bar(p['stats']['hunger'], 100, 10, Colors.GREEN)}")
         print(f" {Colors.YELLOW}{Assets.ICONS['energy']} EN: {Utils.draw_bar(p['stats']['energy'], 100, 10, Colors.YELLOW)} {Colors.BLUE}{Assets.ICONS['hygiene']} CL: {Utils.draw_bar(p['stats']['hygiene'], 100, 10, Colors.BLUE)}")
         print(f" {Colors.MAGENTA}{Assets.ICONS['happy']} HP: {Utils.draw_bar(p['stats']['happy'], 100, 10, Colors.MAGENTA)} {Colors.CYAN}{Assets.ICONS['xp']} XP: {Utils.draw_bar(p['rpg']['xp'], p['rpg']['max_xp'], 10, Colors.CYAN)}")
 
-        # Menu
+        
         print(f"\n{Colors.UNDERLINE}COMMAND CONSOLE:{Colors.RESET}")
         print(f"{Colors.WHITE}[1] {Assets.ICONS['hunger']} FEED    [2] {Assets.ICONS['happy']} PLAY    [3] {Assets.ICONS['hygiene']} CLEAN   [4] {Assets.ICONS['energy']} SLEEP")
         print(f"[5] {Assets.ICONS['gold']} SHOP    [6] {Assets.ICONS['str']} WORK    [7] {Assets.ICONS['crypto']} STOCK   [8] {Assets.ICONS['skull']} ADVENTURE")
@@ -503,7 +503,7 @@ class Game:
                     self.handle_input(choice)
             else:
                 import select
-                i, o, e = select.select([sys.stdin], [], [], 1) # 1 sec timeout
+                i, o, e = select.select([sys.stdin], [], [], 1) 
                 if i:
                     choice = sys.stdin.readline().strip()
                     self.handle_input(choice)
