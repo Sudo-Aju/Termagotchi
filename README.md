@@ -7,14 +7,14 @@
 <body>
 
   <h1>Termagotchi Ultimate</h1>
-  <h2>Persistent CLI Virtual Pet v1.0</h2>
+
   <p>
-  <strong>A High-Fidelity Terminal Life Simulator.</strong><br>
+  <strong>Terminal Life Simulator Game</strong><br>
   Raise a digital pet, trade crypto, fight dungeons, and try to keep it alive.
   </p>
 
   <div>
-  <strong>⚠️ WARNING:</strong> This is a <strong>persistent simulation</strong>. The game calculates time passed even when the window is closed. If you ignore your pet for 24 hours, you may return to find a starving, sick, or deceased subject.
+  <strong>WARNING :)</strong> This is a <strong>persistent simulation</strong>. The game calculates time passed even when the window is closed. If you ignore your pet for 24 hours, you may return to find a starving, sick, or deceased subject.
   </div>
 
   <h2>About</h2>
