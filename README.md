@@ -46,28 +46,28 @@ https://github.com/user-attachments/assets/d9b4f643-552a-4877-9c6f-d5a6a9ee67dc
 
   <h2>Features & Modules</h2>
 
-  <h3>🕰️ Persistence Engine</h3>
+  <h3>Persistence Engine</h3>
   <p>Calculates hunger decay, energy restoration, and market fluctuations while the program is closed.</p>
 
-  <h3>🧬 Evolution System</h3>
+  <h3>Evolution System</h3>
   <p>Raise your subject through 6 life stages: Egg, Baby, Child, Teen, Adult, and Elder.</p>
 
-  <h3>⚔️ RPG Adventure</h3>
+  <h3>RPG Adventure</h3>
   <p>Equip weapons and armor, enter dungeons, and battle enemies in turn-based combat for XP and Loot.</p>
 
-  <h3>📉 Crypto Stock Market</h3>
+  <h3>Crypto Stock Market</h3>
   <p>Buy and sell Bitcoin (BTC) with a realistic, volatile price algorithm that updates every second.</p>
 
-  <h3>🧠 Genetic Traits</h3>
+  <h3>Genetic Traits</h3>
   <p>Select traits at birth like "Glutton", "Smart", or "Brave" that permanently alter gameplay stats.</p>
 
-  <h3>👷 Job Board</h3>
+  <h3>Job Board</h3>
   <p>Earn gold by performing tasks (Janitor, Coder, Assassin) based on your STR, INT, and DEX stats.</p>
 
-  <h3>🎰 The Casino</h3>
+  <h3>The Casino</h3>
   <p>Risk your hard-earned gold on Slot Machines or High-Stakes Guessing games.</p>
 
-  <h3>🎒 Inventory Management</h3>
+  <h3>Inventory Management</h3>
   <p>Purchase food, toys, hygiene products, and medicine from the General Store.</p>
 
   <h2>Controls</h2>
