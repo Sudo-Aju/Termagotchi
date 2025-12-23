@@ -37,7 +37,11 @@ https://github.com/user-attachments/assets/d9b4f643-552a-4877-9c6f-d5a6a9ee67dc
   <p>Save the source code as <code>termagotchi.py</code> and run it directly in your terminal.</p>
   <pre><code>python termagotchi.py</code></pre>
 
-  <h3>3. Recommended Settings</h3>
+  <h3>3. Run the Executable (Alternative)</h3>
+  <p>If you prefer not to use Python directly, you can run the standalone executable.</p>
+  <pre><code>./dist/termagotchi</code></pre>
+
+  <h3>4. Recommended Settings</h3>
   <ul>
   <li><strong>Window Size:</strong> Ensure your terminal window is at least 80 characters wide.</li>
   <li><strong>Color Scheme:</strong> "One Dark" or "Monokai" themes work best for the colored text.</li>
