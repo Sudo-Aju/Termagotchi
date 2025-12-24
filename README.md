@@ -29,19 +29,11 @@
 https://github.com/user-attachments/assets/d9b4f643-552a-4877-9c6f-d5a6a9ee67dc
 
 
-  <h3>1. Prerequisites</h3>
-  <p>Ensure you have Python 3 installed on your system.</p>
-  <pre><code>python --version</code></pre>
-
-  <h3>2. Run the Script</h3>
-  <p>Save the source code as <code>termagotchi.py</code> and run it directly in your terminal.</p>
-  <pre><code>python termagotchi.py</code></pre>
-
-  <h3>3. Run the Executable (Alternative)</h3>
-  <p>If you prefer not to use Python directly, you can run the standalone executable.</p>
+  <h3>1. Download & Run</h3>
+  <p>Download the entire repository/folder. Then, run the standalone executable directly:</p>
   <pre><code>./dist/termagotchi</code></pre>
 
-  <h3>4. Recommended Settings</h3>
+  <h3>2. Recommended Settings</h3>
   <ul>
   <li><strong>Window Size:</strong> Ensure your terminal window is at least 80 characters wide.</li>
   <li><strong>Color Scheme:</strong> "One Dark" or "Monokai" themes work best for the colored text.</li>
